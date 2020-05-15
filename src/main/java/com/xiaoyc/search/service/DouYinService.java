@@ -1,9 +1,9 @@
 package com.xiaoyc.search.service;
 
-import com.alibaba.fastjson.JSONObject;
+
 import com.xiaoyc.search.entity.vo.DDXResultVO;
 import com.xiaoyc.search.tool.ErrorException;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -12,11 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.*;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author xiaoyc
@@ -62,7 +57,6 @@ public class DouYinService {
             RestTemplate restTemplate = new RestTemplate();
             MultiValueMap<String ,String> map = new LinkedMultiValueMap();
             map.add("url", url);
-
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.MULTIPART_FORM_DATA);
             HttpEntity httpEntity = new HttpEntity(map, headers);
