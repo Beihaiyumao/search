@@ -1,7 +1,6 @@
 package com.xiaoyc.search.controller;
 
-import java.io.File;
-import java.lang.ref.Reference;
+
 
 import com.xiaoyc.search.entity.vo.DDXResultVO;
 import com.xiaoyc.search.service.DouYinReptileService;
@@ -41,7 +40,7 @@ public class DouYinController {
      * @author xiaoyc
      * @date 2020/5/15 0015 10:49
      **/
-    @PostMapping("/dy/video")
+    @GetMapping("/dy/video")
     public byte[] getVideo(String url) throws Exception {
         return douYinService.getVideo(url);
     }
